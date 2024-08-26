@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  @font-face {
+    font-family: "generalsans-light";
+    src: url("/fonts/GeneralSans-Light.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-regular";
+    src: url("/fonts/GeneralSans-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-medium";
+    src: url("/fonts/GeneralSans-Medium.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-semibold";
+    src: url("/fonts/GeneralSans-Semibold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "generalsans-bold";
+    src: url("/fonts/GeneralSans-Bold.woff") format("woff");
+  }
+  html {
+    scroll-behavior: smooth;
+    font-family: "generalsans-regular";
+  }
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+  }
+  html::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #d6d6d6;
+  }
+  .regular{
+    font-family: "generalsans-regular";
+  }
+  .light{
+    font-family: "generalsans-light";
+  }
+  .bold{
+    font-family: "generalsans-bold";
+  }
+  .semibold{
+    font-family: "generalsans-semibold";
+  }
+
+  /* styles.css */
+.scroll-container {
+  overflow: hidden;
+  position: relative;
+}
+
+
+}
