@@ -1,3 +1,5 @@
+import Cardporto from "./Cardporto";
+
 const Portfolio = () => {
   return (
     <section className="bg-dark">
@@ -45,9 +47,15 @@ const Portfolio = () => {
 
           <div className="bg-[#C4E747] w-1/2 h-1"></div>
         </div>
-        <h1 className="lg:text-8xl md:text-5xl text-3xl bold text-center text-gray-900">
+        <h1 className="lg:text-8xl md:text-5xl text-3xl bold text-center">
           Let’s See <br /> What I Make
         </h1>
+      </div>
+      <div className="lg:mx-16 mx-5 mt-5 flex flex-wrap justify-center gap-5">
+        <Cardporto image="ui" year="2023" title="INTIC PSIKO"link="https://sakcss.vercel.app/"/>
+        <Cardporto image="moneytracker" year="2023" title="MONEY TRACKER"/>
+        <Cardporto image="game" year="2023" title="GAME PAK TANI"/>
+        <Cardporto image="bookshelf" year="2023" title="LIST READING"/>
       </div>
     </section>
   );

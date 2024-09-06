@@ -54,6 +54,12 @@
   overflow: hidden;
   position: relative;
 }
+.back {
+  transition: transform 1s ease-out;
+}
 
-
+section {
+  overflow: hidden;
+  position: relative;
+}
 }
