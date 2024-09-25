@@ -2,7 +2,7 @@ import Skills from "./Skills";
 
 const About = () => {
   return (
-    <section className="bg-dark py-20">
+    <section className="bg-dark py-20" id="about">
       <div className="sm:flex items-center justify-between lg:mx-16 mx-5 lg:gap-20 gap-5">
         <div className="bg-darkgrey p-5">
           <img src="/images/pp.png" alt="profile" />

@@ -62,4 +62,57 @@ section {
   overflow: hidden;
   position: relative;
 }
+
+#experience{
+  padding: 50px 0px;
+  width: 100%;
+}
+#experience .container{
+  width: 95%;
+  margin: auto;
+}
+.col{
+  width: 50%;
+}
+.experience-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.experience-content .col-left{height: 100%; }
+.experience-content .col-right{width: 50%;}
+
+.experience_text{
+  display: none;
+}
+.experience_pict{
+  height: 208px;
+}
+
+@media (max-width: 640px) {
+  #experience .container{
+    width: 90%;
+    margin: auto;
+  }
+  .experience-content .col-right{width: 100%;}
+
+  .experience-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .experience_text{
+    display: block;
+  }
+
+ }
+ @media (max-width: 500px){
+  .experience_pict{
+    height: 120px;
+  }
+ }
+ @media (max-width: 400px){
+
+ }
+
 }

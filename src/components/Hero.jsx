@@ -1,16 +1,95 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from "gsap";
+import WhatsappContact from '../functions/WhatsappContact';
+
 const Hero = () => {
+  const [loading, setLoading] = useState(true);
+  const overlayRef = useRef(null);
+  const loadingTextRef = useRef(null);
+  const heroTextRef = useRef(null);
+  const descriptionRef = useRef(null);
+
+  useEffect(() => {
+    const overlay = overlayRef.current;
+    const loadingText = loadingTextRef.current;
+    const heroText = heroTextRef.current;
+    const description = descriptionRef.current;
+
+    gsap.set(overlay, { backgroundColor: 'black' });
+    gsap.set(loadingText, { opacity: 0, scale: 0.5 });
+    gsap.set(heroText.children, { y: 50, opacity: 0 });
+    gsap.set(description, { width: 0 });
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setLoading(false);
+        revealHeroText();
+      }
+    });
+
+    tl.to(loadingText, {
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      ease: 'power3.out'
+    })
+    .to(loadingText, {
+      y: '-50vh',
+      duration: 1.5,
+      ease: 'power3.inOut'
+    })
+    .to(overlay, {
+      y: '-100%',
+      duration: 1,
+      ease: 'power3.inOut'
+    }, '-=0.5');
+
+    const revealHeroText = () => {
+      const heroTl = gsap.timeline();
+      
+      heroTl.to(heroText.children, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out'
+      })
+      .to(description, {
+        width: '100%',
+        duration: 2,
+        ease: 'power3.inOut'
+      });
+    };
+
+  }, []);
+
+  <WhatsappContact />
+
   return (
     <section className="bg-primary-500 pb-10">
       <div className="flex lg:flex-row flex-col sm:gap-20 gap-5 sm:mx-16 mx-5">
-        <div className="lg:w-4/5 w-full">
-          <h1 className="bold sm:text-8xl text-6xl">
-            CREATIVE <br /> IDEAS
-            <br />
-            <span className="light">FROM</span> SHAKA
-          </h1>
+      {loading && (
+        <div ref={overlayRef} className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <div ref={loadingTextRef} className="w-4/5  text-white">
+            <h1 className="bold sm:text-8xl text-6xl">
+              CREATIVE <br /> IDEAS
+              <br />
+              <span className="light opacity-50">FROM</span> SHAKA
+            </h1>
+          </div>
         </div>
+      )}
+      <div className="lg:w-4/5 w-full overflow-hidden">
+        <h1 ref={heroTextRef} className="bold sm:text-8xl text-6xl">
+          <div>CREATIVE</div>
+          <div>IDEAS</div>
+          <div>
+            <span className="light">FROM</span> SHAKA
+          </div>
+        </h1>
+      </div>
         <div className="sm:w-1/2">
-          <button className="bg-dark text-primary-500 sm:text-[40px] w-full py-5 semibold rounded-full">
+          <button className="bg-dark text-primary-500 sm:text-[40px] w-full py-5 semibold rounded-full" onClick={WhatsappContact}>
             Let’s Talk
           </button>
           <div className="flex justify-around my-10">

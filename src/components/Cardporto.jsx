@@ -1,8 +1,8 @@
 const Cardporto = ({ image = "", title, year, link }) => {
     return (
-        <div className="card relative overflow-hidden group w-96 h-96">
+        <div className="card relative overflow-hidden group sm:w-96 sm:h-96 w-72 h-72">
             <div className="card-image">
-                <img src={`/images/${image}.png`} alt="" className="w-96 h-96 group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" />
+                <img src={`/images/${image}.png`} alt="" className="sm:w-96 sm:h-96 w-72 h-72 group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover" />
             </div>
             <div className="card-content p-5 group-hover:bg-[#000000c0] absolute top-0 left-0 w-full h-full flex flex-col justify-end transition-transform transform translate-y-full group-hover:translate-y-0 duration-1000">
                 <span className="text-4xl text-white light">{year}</span>
