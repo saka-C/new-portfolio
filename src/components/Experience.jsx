@@ -70,7 +70,7 @@ const Experience = () => {
               date="July 2024 - Now"
             />
             <ExperienceCard
-              title="1st Lomba Cipta Game Nasional"
+              title="1P Lomba Cipta Game Nasional"
               desc="Achieved 1P and the overall champion title in a national game-making competition."
               image="lom.png"
               date="November 18 2023"
