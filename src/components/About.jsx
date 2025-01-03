@@ -5,7 +5,7 @@ const About = () => {
     <section className="bg-dark py-20" id="about">
       <div className="sm:flex items-center justify-between lg:mx-16 mx-5 lg:gap-20 gap-5">
         <div className="bg-darkgrey p-5">
-          <img src="/images/pp.png" alt="profile" />
+          <img src="/images/pp.png" alt="Shaka Aufa - Frontend Web Developer" />
           <h2 className="semibold text-5xl mt-2 text-white">Shaka Aufa</h2>
         </div>
         <div className="lg:w-3/4 sm:w-1/2 lg:text-3xl text-xl text-white sm:mt-0 mt-5">
