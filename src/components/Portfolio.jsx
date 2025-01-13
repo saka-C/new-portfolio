@@ -57,6 +57,7 @@ const Portfolio = () => {
         <Cardporto image="game" year="2023" title="GAME PAK TANI" link="https://paktani.vercel.app/"/>
         <Cardporto image="bookshelf" year="2023" title="LIST READING" link="https://bookshelf-neoone.vercel.app/"/>
         <Cardporto image="co2labs" year="2024" title="CO2 Labs" link="https://labsco2.com/"/>
+        <Cardporto image="lcgn" year="2025" title="LCGN Clevio" link="https://clev.io/LCGNAI2025/"/>
       </div>
     </section>
   );
