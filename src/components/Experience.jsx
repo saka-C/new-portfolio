@@ -54,7 +54,7 @@ const Experience = () => {
             <ExperienceCard
               title="Founder NEO ONE Indonesia"
               desc="Has experience as a founder of an organization focused on digital product development and technology education for the public."
-              image="fou.png"
+              image="founder.png"
               date="July 2023 - Now"
             />
             <ExperienceCard
